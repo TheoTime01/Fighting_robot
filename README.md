@@ -4,7 +4,7 @@ références:
 
 - https://github.com/Lynxmotion/Arduino-PS2X
 
-https://joy-it.net/en/products/SBC-WLGamepad
+- https://joy-it.net/en/products/SBC-WLGamepad
 
 
 ## Description du projet
