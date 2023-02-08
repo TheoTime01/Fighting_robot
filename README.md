@@ -1,4 +1,4 @@
-# Fighting_robot
+# Fighting Robot
 
 ## Description du projet
 
