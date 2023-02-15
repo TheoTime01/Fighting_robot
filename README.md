@@ -1,8 +1,25 @@
 # Fighting_robot
 
+## Table of Contents
+- [Fighting\_robot](#fighting_robot)
+  - [Table of Contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [3D Model](#3d-model)
+  - [Materials](#materials)
+  - [Software](#software)
+  - [Assembly](#assembly)
+  - [Robot Control](#robot-control)
+  - [Assembly of Components](#assembly-of-components)
+    - [Transmitter Assembly](#transmitter-assembly)
+    - [Rest of the Robot Assembly](#rest-of-the-robot-assembly)
+  - [References](#references)
+
 ## Project Description
 
 As part of an initiative to introduce robotics to new members of my student association Galiléo, I have decided to develop a combat robot that can move and flip over its opponents. The robot is composed of two robots, each equipped with a wireless gamepad. The robot is powered by 2 motors, a receiver module, an Arduino, and a 9V battery. The robot is controlled by a wireless gamepad.
+
+## 3D Model
+![image](images/FR.jpg)
 
 ## Materials
 - 2 DC motors
