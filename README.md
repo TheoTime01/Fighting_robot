@@ -1,41 +1,39 @@
 # Fighting_robot
 
-## Description du projet
+## Project Description
 
-Dans le cadre d'ouverture à la robotique pour les nouveaux membres de mon association étudiante Galiléo, j'ai décidé de développer un robot de combat qui se déplace et renverse ses adversaires. 
-Il est composé de 2 robots, chacun équipé d'un gamepad sans fil. Le robot est équipé de 2 moteurs, d'un module de réception, d'un arduino et d'une batterie 9V. 
-Le robot est contrôlé par un gamepad sans fil.
+As part of an initiative to introduce robotics to new members of my student association Galiléo, I have decided to develop a combat robot that can move and flip over its opponents. The robot is composed of two robots, each equipped with a wireless gamepad. The robot is powered by 2 motors, a receiver module, an Arduino, and a 9V battery. The robot is controlled by a wireless gamepad.
 
-## Matériel
-- 2 moteurs DC 
-- 1 servo-moteur 
-- 1 module de réception
-- gamepad sans fil
-- Arduino Uno
-- batterie 9V
-- pièces détachées
-- LED
-- driver
+## Materials
+2 DC motors
+1 servo motor
+1 receiver module
+wireless gamepad
+Arduino Uno
+9V battery
+spare parts
+LED
+driver
 
-## Logiciel
+## Software
 - Arduino IDE
 
-## Montage
+## Assembly
 
 
-## Contrôle du robot
+## Robot Control
 ![image](images/mannette.jpg)
 
-## Montage des composants
-### montage du transmetteur
+## Assembly of Components
+### Transmitter Assembly
 ![image](images/transmitter.jpg)
 
-### montage du reste du robot
+### Rest of the Robot Assembly
 ![image](images/arduino_bb.jpg)
 
-Le placement des composants est libre, il suffit de respecter les branchements.
+The placement of components is flexible, as long as the connections are respected.
 
-## Références
+## References
 
 - https://github.com/Lynxmotion/Arduino-PS2X
 
