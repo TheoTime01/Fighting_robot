@@ -1,12 +1,5 @@
 # Fighting_robot
 
-références: 
-
-- https://github.com/Lynxmotion/Arduino-PS2X
-
-https://joy-it.net/en/products/SBC-WLGamepad
-
-
 ## Description du projet
 
 Dans le cadre d'ouverture à la robotique pour les nouveaux membres de mon association étudiante Galiléo, j'ai décidé de développer un robot de combat qui se déplace et renverse ses adversaires. 
@@ -34,6 +27,22 @@ Le robot est contrôlé par un gamepad sans fil.
 ![image](images/mannette.jpg)
 
 ## Montage des composants
+# montage du transmetteur
+![image](images/transmitter.jpg)
+
+# montage du reste du robot
+![image](images/arduino_bb.jpg)
+
+Le placement des composants est libre, il suffit de respecter les branchements.
+
+## Références
+
+- https://github.com/Lynxmotion/Arduino-PS2X
+
+- https://joy-it.net/en/products/SBC-WLGamepad
+
+- https://www.fingertechrobotics.com/proddetail.php?prod=ft-viper-v2
+
 
 
 
