@@ -27,10 +27,10 @@ Le robot est contrôlé par un gamepad sans fil.
 ![image](images/mannette.jpg)
 
 ## Montage des composants
-# montage du transmetteur
+### montage du transmetteur
 ![image](images/transmitter.jpg)
 
-# montage du reste du robot
+### montage du reste du robot
 ![image](images/arduino_bb.jpg)
 
 Le placement des composants est libre, il suffit de respecter les branchements.
