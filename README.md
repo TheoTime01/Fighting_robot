@@ -8,6 +8,7 @@
   - [Materials](#materials)
   - [Software](#software)
   - [Assembly](#assembly)
+- [Lift Arm](#lift-arm)
   - [Robot Control](#robot-control)
   - [Assembly of Components](#assembly-of-components)
     - [Transmitter Assembly](#transmitter-assembly)
@@ -36,7 +37,10 @@ As part of an initiative to introduce robotics to new members of my student asso
 - Arduino IDE
 
 ## Assembly
-
+# Lift Arm
+The lift arm is composed of a servo motor and 3D printed parts.
+![image](images/lift_arm.jpg)
+stl files: [link](STL/Lift-Arm)
 
 ## Robot Control
 ![image](images/mannette.jpg)
