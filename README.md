@@ -39,9 +39,9 @@ As part of an initiative to introduce robotics to new members of my student asso
 ## Assembly
 # Lift Arm
 The lift arm is composed of a servo motor and 3D printed parts.
-![image](images/Lift_arm.jpg)
+![image]([images/Lift_arm.jpg](https://github.com/TheoTime01/Fighting_robot/blob/8253575ac09b22fa2c3ba46561adc168d18150e1/images/Lift_arm.JPG))
 
-stl files: [link](STL/Lift-Arm)
+STL FILES: [textlink](STL/Lift-Arm)
 
 ## Robot Control
 ![image](images/mannette.jpg)
