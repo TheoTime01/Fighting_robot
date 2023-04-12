@@ -5,8 +5,6 @@ date : 2019-05-06
 description : robot combat
 */
 
-ps2x.config_gamepad(9,7,6,8, true, true)
-
 //bibliothèque
 #include <PS2X_lib.h>
 #include <Servo.h>
@@ -18,18 +16,17 @@ ps2x.config_gamepad(9,7,6,8, true, true)
 #define PS2_CLK    12
 
 // Motor Connections
-#define M1 6
-#define M2 7
-
+#define borneENA        9      // On associe la borne "ENA" du L298N à la pin D10 de l'arduino moteur A
+#define borneIN1        8       // On associe la borne "IN1" du L298N à la pin D9 de l'arduino moteur A
+#define borneIN2        7       // On associe la borne "IN2" du L298N à la pin D8 de l'arduino moteur A
+#define borneIN3        6       // On associe la borne "IN3" du L298N à la pin D7 de l'arduino moteur B
+#define borneIN4        5       // On associe la borne "IN4" du L298N à la pin D6 de l'arduino moteur B
+#define borneENB        4       // On associe la borne "ENB" du L298N à la pin D5 de l'arduino moteur B
 // Servo Pin
-#define SERVO_PIN 9
+#define SERVO_PIN 3
 
 //LED Pin
 #define LED_PIN 2
-
-// Speed of Motors
-int leftspeed = 150;
-int rightspeed = 150;
 
 Servo myservo;
 PS2X ps2x;
@@ -38,55 +35,53 @@ void setup() {
   // Start serial communication
   Serial.begin(115200);
   
+  // Configuration de toutes les pins de l'Arduino en "sortie" (car elles attaquent les entrées du module L298N)
+  pinMode(borneENA, OUTPUT);
+  pinMode(borneIN1, OUTPUT);
+  pinMode(borneIN2, OUTPUT);
+  pinMode(borneIN3, OUTPUT);
+  pinMode(borneIN4, OUTPUT);
+  pinMode(borneENB, OUTPUT);
+
   // Initialize Servo
   myservo.attach(SERVO_PIN);
   
   // Initialize the PS2 controller
-  ps2x.config_gamepad(PS2_CLK, PS2_CMD, PS2_SEL, PS2_DAT,true,true); //setup pins and settings:  GamePad(clock, command, attention, data, Pressures?, Rumble?) check for error
+ error = ps2x.config_gamepad(9,7,6,8, true, true);
   
-  // Set motor pins as outputs
-  pinMode(M1, OUTPUT);
-  pinMode(M2, OUTPUT);
 }
 
 void loop() {
-  if (ps2x.read_gamepad()) {
+  if (error==1)
+    return;
+
+  else {
+
+    ps2x.read_gamepad(false, vibrate);  
     // Read button states
     int button = ps2x.ButtonDataByte();
 
     // Circle button - move forward
-    if (ps2x.ButtonPressed(PSB_CIRCLE)) {
-      digitalWrite(M1, HIGH); // Set motor 1 to forward
-      digitalWrite(M2, HIGH); // Set motor 2 to forward
-      analogWrite(M1, leftspeed); // Set motor 1 speed
-      analogWrite(M2, rightspeed); // Set motor 2 speed
+    if (ps2x.Button(PSB_CIRCLE)) {
       Serial.println("Circle pressed - Forward");
+      digitalWrite(2, HIGH);
+      delay(500);              // Pause de 500 ms
+      digitalWrite(2, LOW);   // Met la broche 13 au niveau bas = éteint la LED
+      delay(500); 
     }
 
     // Square button - move backward
-    if (ps2x.ButtonPressed(PSB_SQUARE)) {
-      digitalWrite(M1, LOW);
-      digitalWrite(M2, LOW);
-      analogWrite(M1, leftspeed);
-      analogWrite(M2, rightspeed);
+    if (ps2x.Button(PSB_SQUARE)) {
       Serial.println("Square pressed - Backward");
     }
 
     // D-pad Right - turn right
     if (ps2x.ButtonPressed(PSB_PAD_RIGHT)) {
-      digitalWrite(M1, LOW);
-      digitalWrite(M2, HIGH);
-      analogWrite(M1, 0);
-      analogWrite(M2, rightspeed);
       Serial.println("Right pressed - Turn Right");
     }
 
     // D-pad Left - turn left
     if (ps2x.ButtonPressed(PSB_PAD_LEFT)) {
-      digitalWrite(M1, HIGH);
-      digitalWrite(M2, LOW);
-      analogWrite(M1, leftspeed);
-      analogWrite(M2, 0);
       Serial.println("Left pressed - Turn Left");
     }
 
